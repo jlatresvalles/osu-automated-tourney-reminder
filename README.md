@@ -18,7 +18,7 @@ Follow these steps to get the bot running on your Discord server.
 
 1. In the **Bot** tab, click **Reset Token**
 2. Copy the token  
-   ⚠️ **Keep this secret — never share it or commit it to GitHub**
+   ⚠️ **Keep this secret — never share it**
 
 Enable these **Privileged Gateway Intents**:
 - ✅ Message Content Intent
@@ -52,13 +52,37 @@ Enable these **Privileged Gateway Intents**:
 ### 4️⃣ Download & Install the Bot
 
 1. Download this repository  
-   (**Code → Download ZIP** or clone it)
+   (**Code → Download ZIP** or clone it through your terminal)
 2. Extract the files
 3. Open a terminal in the project folder
-4. Install dependencies and then install the bot:
+4. Install dependencies:
 
 ```
    npm install
+   npm install dotenv
+```
+
+### 5️⃣ Configure Environment Variables
+1. Create a file named **.env** in the project root
+2. Add the following line:
+
+```
+   DISCORD_TOKEN='your_bot_token_here'  
+```  
+   
+   An example of this would be:
+
+```
+   DISCORD_TOKEN='PWENzk1MDg1MDIwMTASDFA4MjcADSFNw.GSSd63.0DFD8182SR29gfj-Rf4uFFf3JszMmKFmUDh2LSus1xeE'
+```
+3. Save the file
+
+### 6️⃣ Start the Bot
+```
+   npm start
+```
+or
+```
    node bot.js
 ```
 
