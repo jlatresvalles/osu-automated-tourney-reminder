@@ -86,6 +86,9 @@ or
    node bot.js
 ```
 
+If everything is configured correctly, the bot will come online and register its slash commands.
+**You would need to do this if every time to shut down the bot.**
+
 ## 🎯 Typical Workflow
 
 1. **Initial Setup:**
