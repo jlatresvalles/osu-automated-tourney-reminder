@@ -1,3 +1,97 @@
+## 🚀 Setup Guide
+
+Follow these steps to get the bot running on your Discord server.
+
+---
+
+### 1️⃣ Create a Discord Bot
+
+1. Go to the **Discord Developer Portal**
+2. Click **New Application**
+3. Give it a name (e.g., `osu! Tournament Bot`)
+4. Open the **Bot** tab
+5. Click **Add Bot** → **Confirm**
+
+---
+
+### 2️⃣ Get Your Bot Token
+
+1. In the **Bot** tab, click **Reset Token**
+2. Copy the token  
+   ⚠️ **Keep this secret — never share it or commit it to GitHub**
+
+Enable these **Privileged Gateway Intents**:
+- ✅ Message Content Intent
+- ✅ Server Members Intent
+
+---
+
+### 3️⃣ Invite the Bot to Your Server
+
+1. Go to **OAuth2 → URL Generator**
+2. Select **Scopes**:
+   - ✅ `bot`
+   - ✅ `applications.commands`
+
+3. Select **Bot Permissions**:
+   - ✅ Manage Roles
+   - ✅ Manage Channels
+   - ✅ Send Messages
+   - ✅ Embed Links
+   - ✅ Attach Files
+   - ✅ Mention Everyone
+   - ✅ Read Message History
+   - ✅ Use Slash Commands
+
+4. Copy the generated URL
+5. Open it in your browser
+6. Select your server and click **Authorize**
+
+---
+
+### 4️⃣ Download & Install the Bot
+
+1. Download this repository  
+   (**Code → Download ZIP** or clone it)
+2. Extract the files
+3. Open a terminal in the project folder
+4. Install dependencies and then install the bot:
+
+```
+   npm install
+   node bot.js
+```
+
+## 🎯 Typical Workflow
+
+1. **Initial Setup:**
+```
+   /setup announcement_channel:#tournaments
+```
+
+2. **Start Monitoring:**
+```
+   /autoscan start
+```
+
+3. **Review Drafts:**
+   - Check `#tournament-review` channel
+   - Click ✏️ Edit if needed
+   - Click ✅ Approve to post
+   - Click ❌ Deny to discard
+
+4. **During Quiet Periods:**
+```
+   /autoscan stop
+```
+
+5. **Quick Checks:**
+```
+   /scan
+```
+
+---
+
 ## 📝 Commands
 
 All commands require **Administrator** permissions unless specified.
@@ -79,35 +173,5 @@ Bot: ⏹️ Auto-scan stopped.
 | Want 24/7 monitoring | `/autoscan start` |
 | Tournament season ended | `/autoscan stop` |
 | Not sure what's happening | `/autoscan status` |
-
----
-
-## 🎯 Typical Workflow
-
-1. **Initial Setup:**
-```
-   /setup announcement_channel:#tournaments
-```
-
-2. **Start Monitoring:**
-```
-   /autoscan start
-```
-
-3. **Review Drafts:**
-   - Check `#tournament-review` channel
-   - Click ✏️ Edit if needed
-   - Click ✅ Approve to post
-   - Click ❌ Deny to discard
-
-4. **During Quiet Periods:**
-```
-   /autoscan stop
-```
-
-5. **Quick Checks:**
-```
-   /scan
-```
 
 ---
